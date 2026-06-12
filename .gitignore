@@ -1,0 +1,8 @@
+scripts
+.idea
+.conda-env/
+__pycache__/
+*.py[cod]
+*.so
+difusco/utils/cython_merge/build/
+difusco/utils/cython_merge/cython_merge.c

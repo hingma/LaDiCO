@@ -1,0 +1,34 @@
+
+Logging to /Users/mox/Research/DIFUSCO/storage/models/tsp_diffusion/gjnos2lk
+Traceback (most recent call last):
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 71, in <module>
+    cli.main()
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 542, in main
+    run()
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 361, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 310, in run_path
+    return _run_module_code(code, init_globals, run_name, pkg_name=pkg_name, script_name=fname)
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 127, in _run_module_code
+    _run_code(code, mod_globals, init_globals, mod_name, mod_spec, pkg_name, script_name)
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 118, in _run_code
+    exec(code, run_globals)
+  File "/Users/mox/Research/DIFUSCO/difusco/train.py", line 157, in <module>
+    main(args)
+  File "/Users/mox/Research/DIFUSCO/difusco/train.py", line 119, in main
+    trainer = Trainer(
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/utilities/argparse.py", line 345, in insert_env_defaults
+    return fn(self, **kwargs)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 433, in __init__
+    self._accelerator_connector = AcceleratorConnector(
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 224, in __init__
+    self._init_strategy()
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 682, in _init_strategy
+    self.strategy = StrategyRegistry.get(self._strategy_flag)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/strategies/strategy_registry.py", line 101, in get
+    raise KeyError(err_msg.format(name, available_names))
+KeyError: "'auto' not found in registry. Available names: bagua, ddp, ddp_find_unused_parameters_false, ddp_fork, ddp_fork_find_unused_parameters_false, ddp_fully_sharded, ddp_notebook, ddp_notebook_find_unused_parameters_false, ddp_sharded, ddp_sharded_find_unused_parameters_false, ddp_sharded_spawn, ddp_sharded_spawn_find_unused_parameters_false, ddp_spawn, ddp_spawn_find_unused_parameters_false, deepspeed, deepspeed_stage_1, deepspeed_stage_2, deepspeed_stage_2_offload, deepspeed_stage_3, deepspeed_stage_3_offload, deepspeed_stage_3_offload_nvme, dp, fsdp, fsdp_native, fsdp_native_full_shard_offload, horovod, hpu_parallel, hpu_single, ipu_strategy, single_device, single_tpu, tpu_spawn, tpu_spawn_debug"

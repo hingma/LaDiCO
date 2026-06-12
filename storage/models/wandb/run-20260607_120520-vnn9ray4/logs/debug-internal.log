@@ -1,0 +1,64 @@
+2026-06-07 12:05:20,767 INFO    StreamThr :24866 [internal.py:wandb_internal():87] W&B internal server running at pid: 24866, started at: 2026-06-07 12:05:20.766736
+2026-06-07 12:05:20,769 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: status
+2026-06-07 12:05:20,770 INFO    WriterThread:24866 [datastore.py:open_for_write():85] open: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/run-vnn9ray4.wandb
+2026-06-07 12:05:20,772 DEBUG   SenderThread:24866 [sender.py:send():334] send: header
+2026-06-07 12:05:20,793 DEBUG   SenderThread:24866 [sender.py:send():334] send: run
+2026-06-07 12:05:20,795 INFO    SenderThread:24866 [sender.py:_maybe_setup_resume():721] checking resume status for None/tsp_diffusion/vnn9ray4
+2026-06-07 12:05:22,983 INFO    SenderThread:24866 [dir_watcher.py:__init__():216] watching files in: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files
+2026-06-07 12:05:22,983 INFO    SenderThread:24866 [sender.py:_start_run_threads():1065] run started: vnn9ray4 with start time 1780805120.759755
+2026-06-07 12:05:22,984 DEBUG   SenderThread:24866 [sender.py:send_request():361] send_request: summary_record
+2026-06-07 12:05:22,984 INFO    SenderThread:24866 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2026-06-07 12:05:22,987 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: check_version
+2026-06-07 12:05:22,987 DEBUG   SenderThread:24866 [sender.py:send_request():361] send_request: check_version
+2026-06-07 12:05:23,880 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: run_start
+2026-06-07 12:05:23,892 DEBUG   HandlerThread:24866 [system_info.py:__init__():31] System info init
+2026-06-07 12:05:23,892 DEBUG   HandlerThread:24866 [system_info.py:__init__():46] System info init done
+2026-06-07 12:05:23,893 INFO    HandlerThread:24866 [system_monitor.py:start():151] Starting system monitor
+2026-06-07 12:05:23,893 INFO    HandlerThread:24866 [system_monitor.py:probe():172] Collecting system info
+2026-06-07 12:05:23,894 INFO    SystemMonitor:24866 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2026-06-07 12:05:23,894 DEBUG   HandlerThread:24866 [system_info.py:probe():195] Probing system
+2026-06-07 12:05:23,895 INFO    SystemMonitor:24866 [interfaces.py:start():168] Started cpu
+2026-06-07 12:05:23,895 INFO    SystemMonitor:24866 [interfaces.py:start():168] Started disk
+2026-06-07 12:05:23,896 INFO    SystemMonitor:24866 [interfaces.py:start():168] Started gpuapple
+2026-06-07 12:05:23,896 INFO    SystemMonitor:24866 [interfaces.py:start():168] Started memory
+2026-06-07 12:05:23,900 DEBUG   HandlerThread:24866 [system_info.py:_probe_git():180] Probing git
+2026-06-07 12:05:23,901 INFO    SystemMonitor:24866 [interfaces.py:start():168] Started network
+2026-06-07 12:05:23,939 DEBUG   HandlerThread:24866 [system_info.py:_probe_git():188] Probing git done
+2026-06-07 12:05:23,939 DEBUG   HandlerThread:24866 [system_info.py:probe():241] Probing system done
+2026-06-07 12:05:23,939 DEBUG   HandlerThread:24866 [system_monitor.py:probe():181] {'os': 'macOS-26.3-arm64-arm-64bit', 'python': '3.9.25', 'heartbeatAt': '2026-06-07T04:05:23.894594', 'startedAt': '2026-06-07T04:05:20.720170', 'docker': None, 'cuda': None, 'args': ('--task', 'tsp', '--wandb_logger_name', 'tsp_diffusion_graph_categorical_tsp50_test', '--diffusion_type', 'categorical', '--do_test', '--learning_rate', '0.0002', '--weight_decay', '0.0001', '--lr_scheduler', 'cosine-decay', '--storage_path', '/Users/mox/Research/DIFUSCO/storage', '--training_split', '/Users/mox/Research/DIFUSCO/data/tsp/tsp50_train_concorde.txt', '--validation_split', '/Users/mox/Research/DIFUSCO/data/tsp/tsp50_test_concorde.txt', '--test_split', '/Users/mox/Research/DIFUSCO/data/tsp/tsp50_test_concorde.txt', '--batch_size', '64', '--num_epochs', '50', '--validation_examples', '8', '--inference_schedule', 'cosine', '--inference_diffusion_steps', '50', '--ckpt_path', '/Users/mox/Research/DIFUSCO/pretrained_ckpts/tsp50/tsp50_categorical.ckpt', '--resume_weight_only'), 'state': 'running', 'program': '/Users/mox/Research/DIFUSCO/difusco/train.py', 'codePath': 'difusco/train.py', 'git': {'remote': 'https://github.com/hingma/DIFUSCO.git', 'commit': '65eb3b7bde76097c0d3438ce743fa6769baf9ce5'}, 'email': 'moxx0831@outlook.com', 'root': '/Users/mox/Research/DIFUSCO', 'host': 'Moxs-MacBook-Air.local', 'username': 'mox', 'executable': '/Users/mox/Research/DIFUSCO/.conda-env/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 4056, 'min': 744, 'max': 4056}, 'cpu_freq_per_core': [{'current': 4056, 'min': 744, 'max': 4056}], 'disk': {'total': 460.4317207336426, 'used': 11.455001831054688}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2026-06-07 12:05:23,939 INFO    HandlerThread:24866 [system_monitor.py:probe():182] Finished collecting system info
+2026-06-07 12:05:23,939 INFO    HandlerThread:24866 [system_monitor.py:probe():185] Publishing system info
+2026-06-07 12:05:23,940 DEBUG   HandlerThread:24866 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2026-06-07 12:05:23,940 DEBUG   HandlerThread:24866 [system_info.py:_save_pip():67] Saving pip packages done
+2026-06-07 12:05:23,940 DEBUG   HandlerThread:24866 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2026-06-07 12:05:23,989 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/conda-environment.yaml
+2026-06-07 12:05:23,990 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/requirements.txt
+2026-06-07 12:05:23,990 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/wandb-summary.json
+2026-06-07 12:05:25,617 DEBUG   HandlerThread:24866 [system_info.py:_save_conda():86] Saving conda packages done
+2026-06-07 12:05:25,620 INFO    HandlerThread:24866 [system_monitor.py:probe():187] Finished publishing system info
+2026-06-07 12:05:25,632 DEBUG   SenderThread:24866 [sender.py:send():334] send: files
+2026-06-07 12:05:25,632 INFO    SenderThread:24866 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2026-06-07 12:05:25,638 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: stop_status
+2026-06-07 12:05:25,639 DEBUG   SenderThread:24866 [sender.py:send_request():361] send_request: stop_status
+2026-06-07 12:05:25,993 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/conda-environment.yaml
+2026-06-07 12:05:25,994 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/wandb-metadata.json
+2026-06-07 12:05:26,532 DEBUG   SenderThread:24866 [sender.py:send():334] send: telemetry
+2026-06-07 12:05:26,533 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:05:26,533 DEBUG   SenderThread:24866 [sender.py:send():334] send: metric
+2026-06-07 12:05:26,534 DEBUG   SenderThread:24866 [sender.py:send():334] send: telemetry
+2026-06-07 12:05:26,534 DEBUG   SenderThread:24866 [sender.py:send():334] send: metric
+2026-06-07 12:05:26,534 WARNING SenderThread:24866 [sender.py:send_metric():1270] Seen metric with glob (shouldn't happen)
+2026-06-07 12:05:27,095 INFO    Thread-20 :24866 [upload_job.py:push():143] Uploaded file /var/folders/jk/5ywxhpc542z11cl4drwntqfc0000gn/T/tmpl0o4uwehwandb/h9bqq22x-wandb-metadata.json
+2026-06-07 12:05:30,009 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/output.log
+2026-06-07 12:05:31,683 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:05:32,019 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/output.log
+2026-06-07 12:05:36,708 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:05:41,729 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:05:44,988 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-07 12:05:46,083 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/output.log
+2026-06-07 12:05:47,121 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:05:50,287 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-07 12:05:52,150 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:05:53,117 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/config.yaml
+2026-06-07 12:05:54,119 INFO    Thread-17 :24866 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_120520-vnn9ray4/files/output.log
+2026-06-07 12:05:57,955 DEBUG   HandlerThread:24866 [handler.py:handle_request():144] handle_request: status_report

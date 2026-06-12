@@ -1,0 +1,81 @@
+{
+    "os": "macOS-26.3-arm64-arm-64bit",
+    "python": "3.9.25",
+    "heartbeatAt": "2026-06-07T05:12:36.933901",
+    "startedAt": "2026-06-07T05:12:34.166185",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--task",
+        "tsp",
+        "--wandb_logger_name",
+        "tsp_diffusion_graph_categorical_tsp50_test",
+        "--diffusion_type",
+        "categorical",
+        "--do_test",
+        "--learning_rate",
+        "0.0002",
+        "--weight_decay",
+        "0.0001",
+        "--lr_scheduler",
+        "cosine-decay",
+        "--storage_path",
+        "/Users/mox/Research/DIFUSCO/storage",
+        "--training_split",
+        "/Users/mox/Research/DIFUSCO/data/tsp/tsp50_train_concorde.txt",
+        "--validation_split",
+        "/Users/mox/Research/DIFUSCO/data/tsp/tsp50_test_concorde.txt",
+        "--test_split",
+        "/Users/mox/Research/DIFUSCO/data/tsp/tsp50_test_concorde.txt",
+        "--batch_size",
+        "64",
+        "--num_epochs",
+        "50",
+        "--validation_examples",
+        "8",
+        "--inference_schedule",
+        "cosine",
+        "--inference_diffusion_steps",
+        "50",
+        "--ckpt_path",
+        "/Users/mox/Research/DIFUSCO/pretrained_ckpts/tsp50/tsp50_categorical.ckpt",
+        "--resume_weight_only"
+    ],
+    "state": "running",
+    "program": "/Users/mox/Research/DIFUSCO/difusco/train.py",
+    "codePath": "difusco/train.py",
+    "git": {
+        "remote": "https://github.com/hingma/DIFUSCO.git",
+        "commit": "65eb3b7bde76097c0d3438ce743fa6769baf9ce5"
+    },
+    "email": "moxx0831@outlook.com",
+    "root": "/Users/mox/Research/DIFUSCO",
+    "host": "Moxs-MacBook-Air.local",
+    "username": "mox",
+    "executable": "/Users/mox/Research/DIFUSCO/.conda-env/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 4056,
+        "min": 744,
+        "max": 4056
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4056,
+            "min": 744,
+            "max": 4056
+        }
+    ],
+    "disk": {
+        "total": 460.4317207336426,
+        "used": 11.455001831054688
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

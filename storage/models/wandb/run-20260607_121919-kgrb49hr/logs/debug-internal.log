@@ -1,0 +1,284 @@
+2026-06-07 12:19:19,763 INFO    StreamThr :32951 [internal.py:wandb_internal():87] W&B internal server running at pid: 32951, started at: 2026-06-07 12:19:19.763318
+2026-06-07 12:19:19,765 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status
+2026-06-07 12:19:19,766 INFO    WriterThread:32951 [datastore.py:open_for_write():85] open: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/run-kgrb49hr.wandb
+2026-06-07 12:19:19,768 DEBUG   SenderThread:32951 [sender.py:send():334] send: header
+2026-06-07 12:19:19,790 DEBUG   SenderThread:32951 [sender.py:send():334] send: run
+2026-06-07 12:19:19,792 INFO    SenderThread:32951 [sender.py:_maybe_setup_resume():721] checking resume status for None/tsp_diffusion/kgrb49hr
+2026-06-07 12:19:22,282 INFO    SenderThread:32951 [dir_watcher.py:__init__():216] watching files in: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files
+2026-06-07 12:19:22,282 INFO    SenderThread:32951 [sender.py:_start_run_threads():1065] run started: kgrb49hr with start time 1780805959.756794
+2026-06-07 12:19:22,282 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: summary_record
+2026-06-07 12:19:22,283 INFO    SenderThread:32951 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2026-06-07 12:19:22,286 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: check_version
+2026-06-07 12:19:22,286 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: check_version
+2026-06-07 12:19:23,298 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/wandb-summary.json
+2026-06-07 12:19:24,547 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: run_start
+2026-06-07 12:19:24,559 DEBUG   HandlerThread:32951 [system_info.py:__init__():31] System info init
+2026-06-07 12:19:24,559 DEBUG   HandlerThread:32951 [system_info.py:__init__():46] System info init done
+2026-06-07 12:19:24,559 INFO    HandlerThread:32951 [system_monitor.py:start():151] Starting system monitor
+2026-06-07 12:19:24,560 INFO    HandlerThread:32951 [system_monitor.py:probe():172] Collecting system info
+2026-06-07 12:19:24,560 INFO    SystemMonitor:32951 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2026-06-07 12:19:24,561 DEBUG   HandlerThread:32951 [system_info.py:probe():195] Probing system
+2026-06-07 12:19:24,561 INFO    SystemMonitor:32951 [interfaces.py:start():168] Started cpu
+2026-06-07 12:19:24,563 INFO    SystemMonitor:32951 [interfaces.py:start():168] Started disk
+2026-06-07 12:19:24,563 DEBUG   HandlerThread:32951 [system_info.py:_probe_git():180] Probing git
+2026-06-07 12:19:24,564 INFO    SystemMonitor:32951 [interfaces.py:start():168] Started gpuapple
+2026-06-07 12:19:24,570 INFO    SystemMonitor:32951 [interfaces.py:start():168] Started memory
+2026-06-07 12:19:24,572 INFO    SystemMonitor:32951 [interfaces.py:start():168] Started network
+2026-06-07 12:19:24,607 DEBUG   HandlerThread:32951 [system_info.py:_probe_git():188] Probing git done
+2026-06-07 12:19:24,607 DEBUG   HandlerThread:32951 [system_info.py:probe():241] Probing system done
+2026-06-07 12:19:24,607 DEBUG   HandlerThread:32951 [system_monitor.py:probe():181] {'os': 'macOS-26.3-arm64-arm-64bit', 'python': '3.9.25', 'heartbeatAt': '2026-06-07T04:19:24.561403', 'startedAt': '2026-06-07T04:19:19.716785', 'docker': None, 'cuda': None, 'args': ('--task', 'tsp', '--wandb_logger_name', 'tsp_diffusion_graph_categorical_tsp50_test', '--diffusion_type', 'categorical', '--do_test', '--learning_rate', '0.0002', '--weight_decay', '0.0001', '--lr_scheduler', 'cosine-decay', '--storage_path', '/Users/mox/Research/DIFUSCO/storage', '--training_split', '/Users/mox/Research/DIFUSCO/data/tsp/tsp50_train_concorde.txt', '--validation_split', '/Users/mox/Research/DIFUSCO/data/tsp/tsp50_test_concorde.txt', '--test_split', '/Users/mox/Research/DIFUSCO/data/tsp/tsp50_test_concorde.txt', '--batch_size', '64', '--num_epochs', '50', '--validation_examples', '8', '--inference_schedule', 'cosine', '--inference_diffusion_steps', '50', '--ckpt_path', '/Users/mox/Research/DIFUSCO/pretrained_ckpts/tsp50/tsp50_categorical.ckpt', '--resume_weight_only'), 'state': 'running', 'program': '/Users/mox/Research/DIFUSCO/difusco/train.py', 'codePath': 'difusco/train.py', 'git': {'remote': 'https://github.com/hingma/DIFUSCO.git', 'commit': '65eb3b7bde76097c0d3438ce743fa6769baf9ce5'}, 'email': 'moxx0831@outlook.com', 'root': '/Users/mox/Research/DIFUSCO', 'host': 'Moxs-MacBook-Air.local', 'username': 'mox', 'executable': '/Users/mox/Research/DIFUSCO/.conda-env/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 4056, 'min': 744, 'max': 4056}, 'cpu_freq_per_core': [{'current': 4056, 'min': 744, 'max': 4056}], 'disk': {'total': 460.4317207336426, 'used': 11.455001831054688}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2026-06-07 12:19:24,607 INFO    HandlerThread:32951 [system_monitor.py:probe():182] Finished collecting system info
+2026-06-07 12:19:24,607 INFO    HandlerThread:32951 [system_monitor.py:probe():185] Publishing system info
+2026-06-07 12:19:24,607 DEBUG   HandlerThread:32951 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2026-06-07 12:19:24,608 DEBUG   HandlerThread:32951 [system_info.py:_save_pip():67] Saving pip packages done
+2026-06-07 12:19:24,608 DEBUG   HandlerThread:32951 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2026-06-07 12:19:25,297 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/requirements.txt
+2026-06-07 12:19:25,297 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/conda-environment.yaml
+2026-06-07 12:19:26,046 DEBUG   HandlerThread:32951 [system_info.py:_save_conda():86] Saving conda packages done
+2026-06-07 12:19:26,049 INFO    HandlerThread:32951 [system_monitor.py:probe():187] Finished publishing system info
+2026-06-07 12:19:26,060 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:19:26,061 DEBUG   SenderThread:32951 [sender.py:send():334] send: files
+2026-06-07 12:19:26,061 INFO    SenderThread:32951 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2026-06-07 12:19:26,067 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: stop_status
+2026-06-07 12:19:26,069 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: stop_status
+2026-06-07 12:19:26,302 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/conda-environment.yaml
+2026-06-07 12:19:26,302 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/wandb-metadata.json
+2026-06-07 12:19:26,705 DEBUG   SenderThread:32951 [sender.py:send():334] send: telemetry
+2026-06-07 12:19:26,705 DEBUG   SenderThread:32951 [sender.py:send():334] send: metric
+2026-06-07 12:19:26,705 DEBUG   SenderThread:32951 [sender.py:send():334] send: telemetry
+2026-06-07 12:19:26,713 DEBUG   SenderThread:32951 [sender.py:send():334] send: metric
+2026-06-07 12:19:26,713 WARNING SenderThread:32951 [sender.py:send_metric():1270] Seen metric with glob (shouldn't happen)
+2026-06-07 12:19:27,306 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/output.log
+2026-06-07 12:19:27,338 INFO    Thread-20 :32951 [upload_job.py:push():143] Uploaded file /var/folders/jk/5ywxhpc542z11cl4drwntqfc0000gn/T/tmpy__16ck6wandb/davd9kw5-wandb-metadata.json
+2026-06-07 12:19:29,313 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/output.log
+2026-06-07 12:19:30,775 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:19:35,794 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:19:40,815 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:19:45,829 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:19:50,858 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:19:52,422 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/config.yaml
+2026-06-07 12:19:56,531 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:01,552 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:06,571 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:11,587 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:16,607 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:21,630 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:24,573 DEBUG   SystemMonitor:32951 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2026-06-07 12:20:24,577 DEBUG   SenderThread:32951 [sender.py:send():334] send: telemetry
+2026-06-07 12:20:24,577 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:20:27,588 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:32,614 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:37,630 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:42,655 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:47,673 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:52,706 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:20:53,737 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/config.yaml
+2026-06-07 12:20:54,580 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:20:58,592 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:03,609 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:08,630 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:13,650 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:18,669 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:23,685 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:24,586 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:21:29,552 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-07 12:21:29,608 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:34,627 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:35,403 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-07 12:21:39,646 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:40,668 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-07 12:21:41,964 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/output.log
+2026-06-07 12:21:45,367 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:50,391 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:21:54,594 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:21:55,597 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:00,616 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:05,637 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:10,659 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:15,679 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:20,698 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:24,598 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:22:26,607 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:31,626 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:36,644 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:41,671 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:46,687 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:51,704 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:22:54,602 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:22:57,614 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:02,637 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:07,658 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:12,679 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:17,704 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:22,725 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:24,607 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:23:28,618 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:33,637 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:38,657 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:43,678 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:48,697 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:53,716 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:23:54,610 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:23:59,633 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:04,660 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:09,678 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:14,719 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:19,744 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:24,614 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:24:25,620 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:30,632 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:35,655 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:40,680 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:45,703 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:50,723 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:24:54,622 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:24:56,628 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:01,648 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:06,670 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:07,000 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-07 12:25:11,691 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:16,711 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:21,734 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:24,624 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:25:27,634 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:32,654 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:37,672 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:42,694 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:47,715 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:52,736 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:25:54,633 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:25:58,646 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:26:03,664 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:26:08,036 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-07 12:26:08,682 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:26:11,271 DEBUG   SenderThread:32951 [sender.py:send():334] send: exit
+2026-06-07 12:26:11,271 INFO    SenderThread:32951 [sender.py:send_exit():557] handling exit code: 1
+2026-06-07 12:26:11,272 INFO    SenderThread:32951 [sender.py:send_exit():559] handling runtime: 406
+2026-06-07 12:26:11,273 INFO    SenderThread:32951 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2026-06-07 12:26:11,273 INFO    SenderThread:32951 [sender.py:send_exit():565] send defer
+2026-06-07 12:26:11,274 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,274 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 0
+2026-06-07 12:26:11,274 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:11,274 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 0
+2026-06-07 12:26:11,274 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 1
+2026-06-07 12:26:11,274 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,275 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 1
+2026-06-07 12:26:11,275 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:11,275 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 1
+2026-06-07 12:26:11,275 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 2
+2026-06-07 12:26:11,275 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,275 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 2
+2026-06-07 12:26:11,275 INFO    HandlerThread:32951 [system_monitor.py:finish():161] Stopping system monitor
+2026-06-07 12:26:11,299 DEBUG   SystemMonitor:32951 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2026-06-07 12:26:11,299 DEBUG   SystemMonitor:32951 [system_monitor.py:_start():141] Publishing last batch of metrics
+2026-06-07 12:26:11,301 INFO    HandlerThread:32951 [interfaces.py:finish():175] Joined cpu
+2026-06-07 12:26:11,302 INFO    HandlerThread:32951 [interfaces.py:finish():175] Joined disk
+2026-06-07 12:26:11,302 INFO    HandlerThread:32951 [interfaces.py:finish():175] Joined gpuapple
+2026-06-07 12:26:11,302 INFO    HandlerThread:32951 [interfaces.py:finish():175] Joined memory
+2026-06-07 12:26:11,302 INFO    HandlerThread:32951 [interfaces.py:finish():175] Joined network
+2026-06-07 12:26:11,304 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:11,304 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 2
+2026-06-07 12:26:11,304 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 3
+2026-06-07 12:26:11,305 DEBUG   SenderThread:32951 [sender.py:send():334] send: stats
+2026-06-07 12:26:11,305 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,305 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 3
+2026-06-07 12:26:11,305 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:11,306 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 3
+2026-06-07 12:26:11,306 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 4
+2026-06-07 12:26:11,306 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,306 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 4
+2026-06-07 12:26:11,306 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:11,306 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 4
+2026-06-07 12:26:11,306 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 5
+2026-06-07 12:26:11,306 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,306 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 5
+2026-06-07 12:26:11,307 DEBUG   SenderThread:32951 [sender.py:send():334] send: summary
+2026-06-07 12:26:11,307 INFO    SenderThread:32951 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2026-06-07 12:26:11,308 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:11,308 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 5
+2026-06-07 12:26:11,308 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 6
+2026-06-07 12:26:11,308 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,308 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 6
+2026-06-07 12:26:11,308 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:11,308 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 6
+2026-06-07 12:26:11,308 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 7
+2026-06-07 12:26:11,309 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:26:11,309 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,309 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 7
+2026-06-07 12:26:11,309 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:11,309 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 7
+2026-06-07 12:26:11,802 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 8
+2026-06-07 12:26:11,803 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,803 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 8
+2026-06-07 12:26:11,803 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:11,803 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 8
+2026-06-07 12:26:11,814 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 9
+2026-06-07 12:26:11,815 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:11,815 DEBUG   SenderThread:32951 [sender.py:send():334] send: artifact
+2026-06-07 12:26:11,815 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 9
+2026-06-07 12:26:12,269 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/output.log
+2026-06-07 12:26:12,270 INFO    Thread-17 :32951 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/wandb-summary.json
+2026-06-07 12:26:12,272 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: poll_exit
+2026-06-07 12:26:15,527 INFO    SenderThread:32951 [sender.py:send_artifact():1415] sent artifact job-https___github.com_hingma_DIFUSCO.git_difusco_train.py - {'id': 'QXJ0aWZhY3Q6Mjk0MjU1NjgxNg==', 'digest': 'a1fe6c2b7adae46452aa42b6302fdfe8', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_hingma_DIFUSCO.git_difusco_train.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEwNzQ1NTk2Njc=', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Mjk0MjU1NjgxNg==', 'versionIndex': 0}}, 'version': 'v0'}
+2026-06-07 12:26:15,527 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:15,527 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 9
+2026-06-07 12:26:15,527 INFO    SenderThread:32951 [dir_watcher.py:finish():362] shutting down directory watcher
+2026-06-07 12:26:16,281 INFO    SenderThread:32951 [dir_watcher.py:finish():392] scan: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files
+2026-06-07 12:26:16,281 INFO    SenderThread:32951 [dir_watcher.py:finish():406] scan save: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/requirements.txt requirements.txt
+2026-06-07 12:26:16,281 INFO    SenderThread:32951 [dir_watcher.py:finish():406] scan save: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/output.log output.log
+2026-06-07 12:26:16,282 INFO    SenderThread:32951 [dir_watcher.py:finish():406] scan save: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/config.yaml config.yaml
+2026-06-07 12:26:16,291 INFO    SenderThread:32951 [dir_watcher.py:finish():406] scan save: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/wandb-summary.json wandb-summary.json
+2026-06-07 12:26:16,304 INFO    SenderThread:32951 [dir_watcher.py:finish():406] scan save: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/conda-environment.yaml conda-environment.yaml
+2026-06-07 12:26:16,307 INFO    SenderThread:32951 [dir_watcher.py:finish():406] scan save: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/wandb-metadata.json wandb-metadata.json
+2026-06-07 12:26:16,313 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 10
+2026-06-07 12:26:16,314 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: poll_exit
+2026-06-07 12:26:16,314 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:16,315 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 10
+2026-06-07 12:26:16,315 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:16,315 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 10
+2026-06-07 12:26:16,315 INFO    SenderThread:32951 [file_pusher.py:finish():160] shutting down file pusher
+2026-06-07 12:26:17,279 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-07 12:26:17,623 INFO    Thread-22 :32951 [upload_job.py:push():143] Uploaded file /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/output.log
+2026-06-07 12:26:17,887 INFO    Thread-21 :32951 [upload_job.py:push():143] Uploaded file /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/requirements.txt
+2026-06-07 12:26:18,101 INFO    Thread-23 :32951 [upload_job.py:push():143] Uploaded file /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/config.yaml
+2026-06-07 12:26:18,279 INFO    Thread-25 :32951 [upload_job.py:push():143] Uploaded file /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/conda-environment.yaml
+2026-06-07 12:26:18,865 INFO    Thread-24 :32951 [upload_job.py:push():143] Uploaded file /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/files/wandb-summary.json
+2026-06-07 12:26:19,071 INFO    Thread-16 :32951 [sender.py:transition_state():585] send defer: 11
+2026-06-07 12:26:19,072 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:19,072 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 11
+2026-06-07 12:26:19,073 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:19,073 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 11
+2026-06-07 12:26:19,074 INFO    SenderThread:32951 [file_pusher.py:join():165] waiting for file pusher
+2026-06-07 12:26:19,074 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 12
+2026-06-07 12:26:19,075 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:19,075 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 12
+2026-06-07 12:26:19,075 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:19,076 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 12
+2026-06-07 12:26:20,591 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 13
+2026-06-07 12:26:20,591 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:20,592 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 13
+2026-06-07 12:26:20,592 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: status_report
+2026-06-07 12:26:20,592 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:20,592 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 13
+2026-06-07 12:26:20,592 INFO    SenderThread:32951 [sender.py:transition_state():585] send defer: 14
+2026-06-07 12:26:20,593 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: defer
+2026-06-07 12:26:20,593 DEBUG   SenderThread:32951 [sender.py:send():334] send: final
+2026-06-07 12:26:20,593 INFO    HandlerThread:32951 [handler.py:handle_request_defer():170] handle defer: 14
+2026-06-07 12:26:20,593 DEBUG   SenderThread:32951 [sender.py:send():334] send: footer
+2026-06-07 12:26:20,594 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: defer
+2026-06-07 12:26:20,594 INFO    SenderThread:32951 [sender.py:send_request_defer():581] handle sender defer: 14
+2026-06-07 12:26:20,595 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: poll_exit
+2026-06-07 12:26:20,595 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: server_info
+2026-06-07 12:26:20,595 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: get_summary
+2026-06-07 12:26:20,595 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: poll_exit
+2026-06-07 12:26:20,596 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: sampled_history
+2026-06-07 12:26:20,596 DEBUG   SenderThread:32951 [sender.py:send_request():361] send_request: server_info
+2026-06-07 12:26:21,315 INFO    MainThread:32951 [wandb_run.py:_footer_history_summary_info():3427] rendering history
+2026-06-07 12:26:21,316 INFO    MainThread:32951 [wandb_run.py:_footer_history_summary_info():3459] rendering summary
+2026-06-07 12:26:21,316 INFO    MainThread:32951 [wandb_run.py:_footer_sync_info():3383] logging synced files
+2026-06-07 12:26:21,317 DEBUG   HandlerThread:32951 [handler.py:handle_request():144] handle_request: shutdown
+2026-06-07 12:26:21,318 INFO    HandlerThread:32951 [handler.py:finish():841] shutting down handler
+2026-06-07 12:26:21,601 INFO    WriterThread:32951 [datastore.py:close():299] close: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260607_121919-kgrb49hr/run-kgrb49hr.wandb
+2026-06-07 12:26:22,318 INFO    SenderThread:32951 [sender.py:finish():1491] shutting down sender
+2026-06-07 12:26:22,318 INFO    SenderThread:32951 [file_pusher.py:finish():160] shutting down file pusher
+2026-06-07 12:26:22,318 INFO    SenderThread:32951 [file_pusher.py:join():165] waiting for file pusher

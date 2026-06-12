@@ -1,0 +1,140 @@
+2026-06-06 11:41:31,998 INFO    StreamThr :6562 [internal.py:wandb_internal():87] W&B internal server running at pid: 6562, started at: 2026-06-06 11:41:31.998348
+2026-06-06 11:41:32,000 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status
+2026-06-06 11:41:32,001 INFO    WriterThread:6562 [datastore.py:open_for_write():85] open: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/run-e8dzaujy.wandb
+2026-06-06 11:41:32,003 DEBUG   SenderThread:6562 [sender.py:send():334] send: header
+2026-06-06 11:41:32,029 DEBUG   SenderThread:6562 [sender.py:send():334] send: run
+2026-06-06 11:41:32,031 INFO    SenderThread:6562 [sender.py:_maybe_setup_resume():721] checking resume status for None/tsp_diffusion/e8dzaujy
+2026-06-06 11:41:35,595 INFO    SenderThread:6562 [dir_watcher.py:__init__():216] watching files in: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files
+2026-06-06 11:41:35,596 INFO    SenderThread:6562 [sender.py:_start_run_threads():1065] run started: e8dzaujy with start time 1780717291.994805
+2026-06-06 11:41:35,596 DEBUG   SenderThread:6562 [sender.py:send_request():361] send_request: summary_record
+2026-06-06 11:41:35,596 INFO    SenderThread:6562 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2026-06-06 11:41:35,602 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: check_version
+2026-06-06 11:41:35,603 DEBUG   SenderThread:6562 [sender.py:send_request():361] send_request: check_version
+2026-06-06 11:41:36,608 INFO    Thread-17 :6562 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files/wandb-summary.json
+2026-06-06 11:41:37,407 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:41:37,483 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: run_start
+2026-06-06 11:41:37,497 DEBUG   HandlerThread:6562 [system_info.py:__init__():31] System info init
+2026-06-06 11:41:37,497 DEBUG   HandlerThread:6562 [system_info.py:__init__():46] System info init done
+2026-06-06 11:41:37,497 INFO    HandlerThread:6562 [system_monitor.py:start():151] Starting system monitor
+2026-06-06 11:41:37,498 INFO    SystemMonitor:6562 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2026-06-06 11:41:37,498 INFO    HandlerThread:6562 [system_monitor.py:probe():172] Collecting system info
+2026-06-06 11:41:37,499 INFO    SystemMonitor:6562 [interfaces.py:start():168] Started cpu
+2026-06-06 11:41:37,500 DEBUG   HandlerThread:6562 [system_info.py:probe():195] Probing system
+2026-06-06 11:41:37,500 INFO    SystemMonitor:6562 [interfaces.py:start():168] Started disk
+2026-06-06 11:41:37,500 INFO    SystemMonitor:6562 [interfaces.py:start():168] Started gpuapple
+2026-06-06 11:41:37,505 INFO    SystemMonitor:6562 [interfaces.py:start():168] Started memory
+2026-06-06 11:41:37,507 INFO    SystemMonitor:6562 [interfaces.py:start():168] Started network
+2026-06-06 11:41:37,508 DEBUG   HandlerThread:6562 [system_info.py:_probe_git():180] Probing git
+2026-06-06 11:41:37,542 DEBUG   HandlerThread:6562 [system_info.py:_probe_git():188] Probing git done
+2026-06-06 11:41:37,543 DEBUG   HandlerThread:6562 [system_info.py:probe():241] Probing system done
+2026-06-06 11:41:37,543 DEBUG   HandlerThread:6562 [system_monitor.py:probe():181] {'os': 'macOS-26.3-arm64-arm-64bit', 'python': '3.9.25', 'heartbeatAt': '2026-06-06T03:41:37.500424', 'startedAt': '2026-06-06T03:41:31.920279', 'docker': None, 'cuda': None, 'args': ('--task', 'tsp', '--wandb_logger_name', 'tsp_diffusion_graph_categorical_tsp50_test', '--diffusion_type', 'categorical', '--do_test', '--learning_rate', '0.0002', '--weight_decay', '0.0001', '--lr_scheduler', 'cosine-decay', '--storage_path', '/Users/mox/Research/DIFUSCO/storage', '--training_split', '/Users/mox/Research/DIFUSCO/data/tsp/tsp50_train_concorde.txt', '--validation_split', '/Users/mox/Research/DIFUSCO/data/tsp/tsp50_test_concorde.txt', '--test_split', '/Users/mox/Research/DIFUSCO/data/tsp/tsp50_test_concorde.txt', '--batch_size', '64', '--num_epochs', '50', '--validation_examples', '8', '--inference_schedule', 'cosine', '--inference_diffusion_steps', '50', '--ckpt_path', '/Users/mox/Research/DIFUSCO/pretrained_ckpts/tsp50/tsp50_categorical.ckpt', '--resume_weight_only'), 'state': 'running', 'program': '/Users/mox/Research/DIFUSCO/difusco/train.py', 'codePath': 'difusco/train.py', 'git': {'remote': 'https://github.com/Edward-Sun/DIFUSCO.git', 'commit': '65eb3b7bde76097c0d3438ce743fa6769baf9ce5'}, 'email': 'moxx0831@outlook.com', 'root': '/Users/mox/Research/DIFUSCO', 'host': 'Moxs-MacBook-Air.local', 'username': 'mox', 'executable': '/Users/mox/Research/DIFUSCO/.conda-env/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 4056, 'min': 744, 'max': 4056}, 'cpu_freq_per_core': [{'current': 4056, 'min': 744, 'max': 4056}], 'disk': {'total': 460.4317207336426, 'used': 11.455001831054688}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2026-06-06 11:41:37,543 INFO    HandlerThread:6562 [system_monitor.py:probe():182] Finished collecting system info
+2026-06-06 11:41:37,543 INFO    HandlerThread:6562 [system_monitor.py:probe():185] Publishing system info
+2026-06-06 11:41:37,543 DEBUG   HandlerThread:6562 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2026-06-06 11:41:37,544 DEBUG   HandlerThread:6562 [system_info.py:_save_pip():67] Saving pip packages done
+2026-06-06 11:41:37,544 DEBUG   HandlerThread:6562 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2026-06-06 11:41:37,604 INFO    Thread-17 :6562 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files/conda-environment.yaml
+2026-06-06 11:41:37,604 INFO    Thread-17 :6562 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files/requirements.txt
+2026-06-06 11:41:38,891 DEBUG   HandlerThread:6562 [system_info.py:_save_conda():86] Saving conda packages done
+2026-06-06 11:41:38,894 INFO    HandlerThread:6562 [system_monitor.py:probe():187] Finished publishing system info
+2026-06-06 11:41:38,905 DEBUG   SenderThread:6562 [sender.py:send():334] send: files
+2026-06-06 11:41:38,906 INFO    SenderThread:6562 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2026-06-06 11:41:38,916 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: stop_status
+2026-06-06 11:41:38,916 DEBUG   SenderThread:6562 [sender.py:send_request():361] send_request: stop_status
+2026-06-06 11:41:39,610 INFO    Thread-17 :6562 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files/conda-environment.yaml
+2026-06-06 11:41:39,610 INFO    Thread-17 :6562 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files/wandb-metadata.json
+2026-06-06 11:41:40,145 DEBUG   SenderThread:6562 [sender.py:send():334] send: telemetry
+2026-06-06 11:41:40,145 DEBUG   SenderThread:6562 [sender.py:send():334] send: metric
+2026-06-06 11:41:40,146 DEBUG   SenderThread:6562 [sender.py:send():334] send: telemetry
+2026-06-06 11:41:40,146 DEBUG   SenderThread:6562 [sender.py:send():334] send: metric
+2026-06-06 11:41:40,146 WARNING SenderThread:6562 [sender.py:send_metric():1270] Seen metric with glob (shouldn't happen)
+2026-06-06 11:41:41,493 INFO    Thread-20 :6562 [upload_job.py:push():143] Uploaded file /var/folders/jk/5ywxhpc542z11cl4drwntqfc0000gn/T/tmp6h5dgh_3wandb/6zbnx29q-wandb-metadata.json
+2026-06-06 11:41:42,620 INFO    Thread-17 :6562 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files/output.log
+2026-06-06 11:41:42,866 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:41:44,627 INFO    Thread-17 :6562 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files/output.log
+2026-06-06 11:41:47,883 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:41:52,902 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:41:56,152 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:41:56,152 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:41:57,921 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:01,378 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:02,944 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:04,700 INFO    Thread-17 :6562 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files/config.yaml
+2026-06-06 11:42:06,401 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:09,080 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:11,420 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:14,103 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:16,440 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:19,117 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:21,465 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:24,131 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:26,483 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:29,144 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:31,495 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:34,167 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:36,523 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:37,510 DEBUG   SystemMonitor:6562 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2026-06-06 11:42:37,520 DEBUG   SenderThread:6562 [sender.py:send():334] send: telemetry
+2026-06-06 11:42:37,520 DEBUG   SenderThread:6562 [sender.py:send():334] send: stats
+2026-06-06 11:42:39,533 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:41,546 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:44,551 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:46,564 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:49,562 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:51,578 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:54,579 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:42:56,603 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:42:59,592 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:01,619 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:04,617 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:06,003 INFO    Thread-17 :6562 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/files/config.yaml
+2026-06-06 11:43:06,644 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:07,529 DEBUG   SenderThread:6562 [sender.py:send():334] send: stats
+2026-06-06 11:43:11,543 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:11,661 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:16,562 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:16,679 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:21,580 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:21,697 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:26,600 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:26,721 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:31,622 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:31,736 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:36,646 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:36,761 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:37,529 DEBUG   SenderThread:6562 [sender.py:send():334] send: stats
+2026-06-06 11:43:41,782 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:42,547 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:46,796 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:47,566 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:51,819 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:52,585 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:43:56,845 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:43:57,606 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:44:01,866 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:44:02,633 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:44:06,885 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:44:07,537 DEBUG   SenderThread:6562 [sender.py:send():334] send: stats
+2026-06-06 11:44:08,543 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:44:11,904 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:44:13,559 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:44:16,920 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:44:18,582 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:44:21,938 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:44:23,593 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:44:26,957 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:44:28,611 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:44:31,974 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:44:33,630 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: status_report
+2026-06-06 11:44:36,994 DEBUG   HandlerThread:6562 [handler.py:handle_request():144] handle_request: keepalive
+2026-06-06 11:44:37,575 DEBUG   SenderThread:6562 [sender.py:send():334] send: stats
+2026-06-06 11:44:37,717 WARNING StreamThr :6562 [internal.py:is_dead():415] Internal process exiting, parent pid 6529 disappeared
+2026-06-06 11:44:37,717 ERROR   StreamThr :6562 [internal.py:wandb_internal():153] Internal process shutdown.
+2026-06-06 11:44:37,731 ERROR   cpu       :6562 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=6529)
+2026-06-06 11:44:37,731 ERROR   memory    :6562 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=6529)
+2026-06-06 11:44:37,731 ERROR   cpu       :6562 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=6529)
+2026-06-06 11:44:37,732 ERROR   memory    :6562 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=6529)
+2026-06-06 11:44:38,575 INFO    HandlerThread:6562 [handler.py:finish():841] shutting down handler
+2026-06-06 11:44:38,578 INFO    WriterThread:6562 [datastore.py:close():299] close: /Users/mox/Research/DIFUSCO/storage/models/wandb/run-20260606_114131-e8dzaujy/run-e8dzaujy.wandb
+2026-06-06 11:44:38,578 INFO    SenderThread:6562 [sender.py:finish():1491] shutting down sender
+2026-06-06 11:44:38,679 INFO    MainThread:6562 [internal.py:handle_exit():77] Internal process exited

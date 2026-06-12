@@ -1,0 +1,299 @@
+
+Logging to /Users/mox/Research/DIFUSCO/storage/models/tsp_diffusion/qihom5cz
+GPU available: True (mps), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+----------------------------------------------------------------------------------------------------
+GNNEncoder(
+  (node_embed): Linear(in_features=256, out_features=256, bias=True)
+  (edge_embed): Linear(in_features=256, out_features=256, bias=True)
+  (pos_embed): PositionEmbeddingSine()
+  (edge_pos_embed): ScalarEmbeddingSine()
+  (time_embed): Sequential(
+    (0): Linear(in_features=256, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=128, bias=True)
+  )
+  (out): Sequential(
+    (0): GroupNorm32(32, 256, eps=1e-05, affine=True)
+    (1): ReLU()
+    (2): Conv2d(256, 2, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (layers): ModuleList(
+    (0): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (1): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (2): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (3): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (4): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (5): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (6): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (7): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (8): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (9): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (10): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (11): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (time_embed_layers): ModuleList(
+    (0): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (1): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (2): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (3): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (4): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (5): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (6): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (7): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (8): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (9): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (10): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (11): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+  )
+  (per_layer_out): ModuleList(
+    (0): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (1): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (2): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (3): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (4): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (5): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (6): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (7): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (8): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (9): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (10): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (11): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+  )
+)
+----------------------------------------------------------------------------------------------------
+105.40s - thread._ident is None in _get_related_thread!
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=gloo
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+Restoring states from the checkpoint path at /Users/mox/Research/DIFUSCO/pretrained_ckpts/tsp50/tsp50_categorical.ckpt
+Traceback (most recent call last):
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 71, in <module>
+    cli.main()
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 542, in main
+    run()
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 361, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 310, in run_path
+    return _run_module_code(code, init_globals, run_name, pkg_name=pkg_name, script_name=fname)
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 127, in _run_module_code
+    _run_code(code, mod_globals, init_globals, mod_name, mod_spec, pkg_name, script_name)
+  File "/Users/mox/.cursor/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 118, in _run_code
+    exec(code, run_globals)
+  File "/Users/mox/Research/DIFUSCO/difusco/train.py", line 144, in <module>
+    main(args)
+  File "/Users/mox/Research/DIFUSCO/difusco/train.py", line 136, in main
+    trainer.validate(model, ckpt_path=ckpt_path)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 774, in validate
+    return self._call_and_handle_interrupt(self._validate_impl, model, dataloaders, ckpt_path, verbose, datamodule)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 648, in _call_and_handle_interrupt
+    return self.strategy.launcher.launch(trainer_fn, *args, trainer=self, **kwargs)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 821, in _validate_impl
+    results = self._run(model, ckpt_path=self.ckpt_path)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1147, in _run
+    self.strategy.setup(self)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/strategies/ddp.py", line 164, in setup
+    self._share_information_to_prevent_deadlock()
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/strategies/ddp.py", line 399, in _share_information_to_prevent_deadlock
+    self._share_pids()
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/strategies/ddp.py", line 417, in _share_pids
+    pids = self.all_gather(torch.tensor(os.getpid(), device=self.root_device))
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/strategies/parallel.py", line 113, in all_gather
+    return all_gather_ddp_if_available(tensor, group=group, sync_grads=sync_grads)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/utilities/distributed.py", line 219, in all_gather_ddp_if_available
+    return AllGatherGrad.apply(tensor, group)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/pytorch_lightning/utilities/distributed.py", line 187, in forward
+    torch.distributed.all_gather(gathered_tensor, tensor, group=group)
+  File "/Users/mox/Research/DIFUSCO/.conda-env/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 2277, in all_gather
+    work = group.allgather([tensor_list], [tensor])
+RuntimeError: ProcessGroupGloo::allgather: unsupported device type mps
