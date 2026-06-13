@@ -292,7 +292,14 @@ class TSPEdgeVQVAE(nn.Module):
         return self.encoder(x, edge_attr, edge_index)
 
     def quantize(self, z_e):
-        """z_e: (V, d) → (z_q_st, z_q, indices, vq_loss)"""
+        """z_e: (V, d) → (z_q_st, z_q, indices, vq_loss)
+                    z_e: (N, d) continuous encoder output
+        Returns:
+            z_q_st : (N, d)  quantized, carries encoder gradients via STE
+            z_q    : (N, d)  quantized, detached from the encoder graph
+            indices: (N,)    codebook index for each node
+            vq_loss: scalar  codebook + commitment loss
+        """
         return self.vq(z_e)
 
     def decode(self, z_q, x, edge_index, sparse_factor: int):

@@ -773,6 +773,153 @@
       ],
       "console": "integratedTerminal",
       "justMyCode": false
+    },
+
+    // ─── LDM Evaluation ───────────────────────────────────────────────────────
+    {
+      // In-scale evaluation: model and test set at the same size (TSP-50)
+      "name": "Eval: LDM TSP-50 greedy (in-scale)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/difusco/evaluate_ldm.py",
+      "cwd": "${workspaceFolder}/difusco",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/difusco:${env:PYTHONPATH}"
+      },
+      "args": [
+        "--ldm_checkpoint",   "${workspaceFolder}/checkpoints/ldm_tsp50/last.ckpt",
+        "--vqvae_checkpoint", "${workspaceFolder}/checkpoints/vqvae_tsp50/best_vqvae.pt",
+        "--test_file",        "${workspaceFolder}/data/tsp/tsp50_test_concorde.txt",
+        "--vqvae_hidden_dim", "128",
+        "--n_enc_layers",     "4",
+        "--n_dec_layers",     "4",
+        "--latent_dim",       "8",
+        "--num_codes",        "512",
+        "--sparse_factor",    "10",
+        "--n_layers",         "6",
+        "--hidden_dim",       "256",
+        "--diffusion_steps",  "1000",
+        "--diffusion_schedule","linear",
+        "--inference_diffusion_steps","50",
+        "--inference_schedule","linear",
+        "--parallel_sampling","8",
+        "--solver",           "greedy",
+        "--two_opt_iterations","1000",
+        "--num_instances",    "128",
+        "--output_csv",       "${workspaceFolder}/results/eval_tsp50_greedy.csv"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      // Cross-scale: model trained on TSP-50, evaluated on TSP-500
+      "name": "Eval: LDM TSP-50→500 cross-scale (greedy)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/difusco/evaluate_ldm.py",
+      "cwd": "${workspaceFolder}/difusco",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/difusco:${env:PYTHONPATH}"
+      },
+      "args": [
+        "--ldm_checkpoint",   "${workspaceFolder}/checkpoints/ldm_tsp50/last.ckpt",
+        "--vqvae_checkpoint", "${workspaceFolder}/checkpoints/vqvae_tsp50/best_vqvae.pt",
+        "--test_file",        "${workspaceFolder}/data/tsp/tsp500_test_concorde.txt",
+        "--vqvae_hidden_dim", "128",
+        "--n_enc_layers",     "4",
+        "--n_dec_layers",     "4",
+        "--latent_dim",       "8",
+        "--num_codes",        "512",
+        "--sparse_factor",    "10",
+        "--eval_sparse_factor","10",
+        "--n_layers",         "6",
+        "--hidden_dim",       "256",
+        "--diffusion_steps",  "1000",
+        "--diffusion_schedule","linear",
+        "--inference_diffusion_steps","50",
+        "--inference_schedule","linear",
+        "--parallel_sampling","4",
+        "--solver",           "greedy",
+        "--two_opt_iterations","5000",
+        "--num_instances",    "128",
+        "--output_csv",       "${workspaceFolder}/results/eval_tsp500_cross_scale.csv"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      // LKH-3 evaluation with heatmap-guided candidates
+      "name": "Eval: LDM TSP-50 LKH-3 (heatmap-guided)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/difusco/evaluate_ldm.py",
+      "cwd": "${workspaceFolder}/difusco",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/difusco:${env:PYTHONPATH}"
+      },
+      "args": [
+        "--ldm_checkpoint",   "${workspaceFolder}/checkpoints/ldm_tsp50/last.ckpt",
+        "--vqvae_checkpoint", "${workspaceFolder}/checkpoints/vqvae_tsp50/best_vqvae.pt",
+        "--test_file",        "${workspaceFolder}/data/tsp/tsp50_test_concorde.txt",
+        "--vqvae_hidden_dim", "128",
+        "--n_enc_layers",     "4",
+        "--n_dec_layers",     "4",
+        "--latent_dim",       "8",
+        "--num_codes",        "512",
+        "--sparse_factor",    "10",
+        "--n_layers",         "6",
+        "--hidden_dim",       "256",
+        "--diffusion_steps",  "1000",
+        "--diffusion_schedule","linear",
+        "--inference_diffusion_steps","50",
+        "--inference_schedule","linear",
+        "--parallel_sampling","1",
+        "--solver",           "greedy", "lkh3",
+        "--two_opt_iterations","1000",
+        "--lkh_binary",       "${workspaceFolder}/LKH-3.0.6/LKH",
+        "--lkh_runs",         "1",
+        "--lkh_time_limit",   "60",
+        "--lkh_candidates",   "20",
+        "--num_instances",    "128",
+        "--output_csv",       "${workspaceFolder}/results/eval_tsp50_lkh3.csv"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      // Save heatmaps for offline tsp_mcts processing
+      "name": "Eval: LDM TSP-500 save heatmaps (for MCTS)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/difusco/evaluate_ldm.py",
+      "cwd": "${workspaceFolder}/difusco",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/difusco:${env:PYTHONPATH}"
+      },
+      "args": [
+        "--ldm_checkpoint",   "${workspaceFolder}/checkpoints/ldm_tsp50/last.ckpt",
+        "--vqvae_checkpoint", "${workspaceFolder}/checkpoints/vqvae_tsp50/best_vqvae.pt",
+        "--test_file",        "${workspaceFolder}/data/tsp/tsp500_test_concorde.txt",
+        "--vqvae_hidden_dim", "128",
+        "--n_enc_layers",     "4",
+        "--n_dec_layers",     "4",
+        "--latent_dim",       "8",
+        "--num_codes",        "512",
+        "--sparse_factor",    "10",
+        "--eval_sparse_factor","10",
+        "--n_layers",         "6",
+        "--hidden_dim",       "256",
+        "--diffusion_steps",  "1000",
+        "--diffusion_schedule","linear",
+        "--inference_diffusion_steps","50",
+        "--inference_schedule","linear",
+        "--parallel_sampling","1",
+        "--solver",           "save",
+        "--heatmap_dir",      "${workspaceFolder}/results/heatmaps_tsp500",
+        "--num_instances",    "128"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
     }
   ]
 }

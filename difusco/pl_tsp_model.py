@@ -230,7 +230,7 @@ class TSPModel(COMetaModel):
           parallel_sampling=self.args.parallel_sampling,
       )
 
-      # Refine using 2-opt
+      #==== Refine using 2-opt ====
       solved_tours, ns = batched_two_opt_torch(
           np_points.astype("float64"), np.array(tours).astype('int64'),
           max_iterations=self.args.two_opt_iterations, device=device)

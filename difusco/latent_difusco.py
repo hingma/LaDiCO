@@ -440,7 +440,7 @@ class LatentDifusco(pl.LightningModule):
     # ── Test / Validation ─────────────────────────────────────────────────────
 
     def test_step(self, batch, batch_idx, split="test"):
-        _, graph_data, point_indicator, _, gt_tour = batch
+        _, graph_data, _, _, gt_tour = batch
         device = gt_tour.device
 
         points     = graph_data.x.reshape(-1, 2)           # (N, 2)
