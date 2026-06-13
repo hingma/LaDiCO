@@ -119,7 +119,7 @@ storage_path/
 
 ```bash
 python ladico/train_vqvae.py \
-    --storage_path /path/to/data \
+    --storage_path data/ \
     --training_split   tsp/tsp50_train_concorde.txt \
     --validation_split tsp/tsp50_test_concorde.txt \
     --test_split       tsp/tsp50_test_concorde.txt \
@@ -130,6 +130,8 @@ python ladico/train_vqvae.py \
     --output_dir checkpoints/vqvae_tsp50 \
     --do_train
 ```
+
+`--training_split`: Relative path(s) to training file(s).
 
 Mix TSP-50 and TSP-100 with a comma-separated `--training_split`:
 
