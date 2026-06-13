@@ -1,4 +1,5 @@
 import argparse
+import os
 import pprint as pp
 import time
 import warnings
@@ -67,7 +68,9 @@ if __name__ == "__main__":
   # Pretty print the run args
   pp.pprint(vars(opts))
 
-  with open(opts.filename, "w") as f:
+  num_workers = min(opts.batch_size, os.cpu_count() or opts.batch_size)
+
+  with open(opts.filename, "w") as f, Pool(num_workers) as p:
     start_time = time.time()
     for b_idx in tqdm.tqdm(range(opts.num_samples // opts.batch_size)):
       num_nodes = np.random.randint(low=opts.min_nodes, high=opts.max_nodes + 1)
@@ -75,9 +78,8 @@ if __name__ == "__main__":
 
       batch_nodes_coord = np.random.random([opts.batch_size, num_nodes, 2])
 
-      with Pool(opts.batch_size) as p:
-        args = [(batch_nodes_coord[idx], opts.solver, num_nodes, opts.lkh_trails) for idx in range(opts.batch_size)]
-        tours = p.map(solve_tsp, args)
+      args = [(batch_nodes_coord[idx], opts.solver, num_nodes, opts.lkh_trails) for idx in range(opts.batch_size)]
+      tours = p.map(solve_tsp, args)
 
       for idx, tour in enumerate(tours):
         if (np.sort(tour) == np.arange(num_nodes)).all():
