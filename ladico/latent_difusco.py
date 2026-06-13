@@ -30,7 +30,7 @@ from torch_sparse import SparseTensor
 from torch_sparse import sum as sparse_sum, mean as sparse_mean, max as sparse_max
 
 from co_datasets.tsp_graph_dataset import TSPGraphDataset
-from models.edge_vqvae import TSPEdgeVQVAE
+from edge_vqvae import TSPEdgeVQVAE
 from models.gnn_encoder import PositionEmbeddingSine, ScalarEmbeddingSine1D
 from models.nn import timestep_embedding, zero_module, linear
 from utils.diffusion_schedulers import GaussianDiffusion, InferenceSchedule

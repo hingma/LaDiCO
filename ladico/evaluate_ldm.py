@@ -23,23 +23,23 @@ set --eval_sparse_factor to a larger K for a denser K-NN graph at eval time.
 Examples
 --------
 # greedy + 2-opt  (in-scale)
-python evaluate_ldm.py \\
+python ladico/evaluate_ldm.py \\
     --ldm_checkpoint   checkpoints/ldm_tsp50/last.ckpt \\
     --vqvae_checkpoint checkpoints/vqvae_tsp50/best_vqvae.pt \\
     --test_file        data/tsp/tsp50_test_concorde.txt
 
 # cross-scale: model trained on TSP-50, tested on TSP-500
-python evaluate_ldm.py \\
+python ladico/evaluate_ldm.py \\
     --ldm_checkpoint   checkpoints/ldm_tsp50/last.ckpt \\
     --vqvae_checkpoint checkpoints/vqvae_tsp50/best_vqvae.pt \\
     --test_file        data/tsp/tsp500_test_concorde.txt \\
     --eval_sparse_factor 10 --two_opt_iterations 1000
 
 # save heatmaps for offline MCTS  (compatible with tsp_mcts/solve-500.sh)
-python evaluate_ldm.py ... --solver save --heatmap_dir results/heatmaps/
+python ladico/evaluate_ldm.py ... --solver save --heatmap_dir results/heatmaps/
 
 # LKH-3 guided by heatmap
-python evaluate_ldm.py ... --solver lkh3 \\
+python ladico/evaluate_ldm.py ... --solver lkh3 \\
     --lkh_binary LKH-3.0.6/LKH --lkh_runs 1 --lkh_candidates 20
 """
 
@@ -58,10 +58,12 @@ import torch
 from torch_geometric.data import DataLoader as GraphDataLoader
 from tqdm import tqdm
 
-sys.path.insert(0, os.path.dirname(__file__))
+_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, _DIR)
+sys.path.insert(0, os.path.join(_DIR, '..', 'difusco'))
 
 from co_datasets.tsp_graph_dataset import TSPGraphDataset
-from models.edge_vqvae import TSPEdgeVQVAE
+from edge_vqvae import TSPEdgeVQVAE
 from latent_difusco import LatentDiffuscoDenoiser
 from utils.diffusion_schedulers import GaussianDiffusion, InferenceSchedule
 from utils.tsp_utils import TSPEvaluator, batched_two_opt_torch, merge_tours

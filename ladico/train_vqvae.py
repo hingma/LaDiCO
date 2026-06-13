@@ -4,7 +4,7 @@ Training script for the TSP Edge VQ-VAE (Phase 1 of the LDM pipeline).
 Usage examples
 --------------
 # Train on TSP-50
-python train_vqvae.py \
+python ladico/train_vqvae.py \
     --storage_path /path/to/data \
     --training_split   tsp/tsp50_train_concorde.txt \
     --validation_split tsp/tsp50_test_concorde.txt \
@@ -13,7 +13,7 @@ python train_vqvae.py \
     --do_train
 
 # Train on TSP-100
-python train_vqvae.py ... --training_split tsp/tsp100_train_concorde.txt ...
+python ladico/train_vqvae.py ... --training_split tsp/tsp100_train_concorde.txt ...
 """
 
 import os
@@ -33,9 +33,11 @@ from pytorch_lightning.strategies.single_device import SingleDeviceStrategy
 from pytorch_lightning.utilities import rank_zero_info
 from torch_geometric.data import DataLoader as GraphDataLoader
 
-sys.path.insert(0, os.path.dirname(__file__))
+_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, _DIR)
+sys.path.insert(0, os.path.join(_DIR, '..', 'difusco'))
 from co_datasets.tsp_graph_dataset import TSPGraphDataset
-from models.edge_vqvae import TSPEdgeVQVAE, bhh_energy_loss
+from edge_vqvae import TSPEdgeVQVAE, bhh_energy_loss
 
 
 # ──────────────────────────────────────────────────────────────────────────────

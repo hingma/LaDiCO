@@ -4,7 +4,7 @@ Training script for Phase 2: Latent Diffusion Model on VQ-VAE codes.
 Usage examples
 --------------
 # Train on TSP-50 (VQ-VAE checkpoint required from Phase 1)
-python train_ldm.py \
+python ladico/train_ldm.py \
     --storage_path /path/to/repo \
     --training_split   data/tsp/tsp50_train_concorde.txt \
     --validation_split data/tsp/tsp50_test_concorde.txt \
@@ -28,7 +28,9 @@ from pytorch_lightning.strategies.ddp import DDPStrategy
 from pytorch_lightning.strategies.single_device import SingleDeviceStrategy
 from pytorch_lightning.utilities import rank_zero_info
 
-sys.path.insert(0, os.path.dirname(__file__))
+_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, _DIR)
+sys.path.insert(0, os.path.join(_DIR, '..', 'difusco'))
 from latent_difusco import LatentDifusco
 
 
