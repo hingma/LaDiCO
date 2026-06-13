@@ -8,7 +8,12 @@ import lkh
 import numpy as np
 import tqdm
 import tsplib95
-from concorde.tsp import TSPSolver  # https://github.com/jvkersch/pyconcorde
+
+try:
+    from concorde.tsp import TSPSolver  # https://github.com/jvkersch/pyconcorde
+    _CONCORDE_AVAILABLE = True
+except ImportError:
+    _CONCORDE_AVAILABLE = False
 
 warnings.filterwarnings("ignore")
 
@@ -16,6 +21,8 @@ warnings.filterwarnings("ignore")
 def solve_tsp(args):
   nodes_coord, solver, num_nodes, lkh_trails = args
   if solver == "concorde":
+    if not _CONCORDE_AVAILABLE:
+      raise ImportError("pyconcorde is not installed. Install it with: pip install git+https://github.com/jvkersch/pyconcorde")
     scale = 1e6
     tsp_solver = TSPSolver.from_data(nodes_coord[:, 0] * scale, nodes_coord[:, 1] * scale, norm="EUC_2D")
     solution = tsp_solver.solve(verbose=False)
@@ -45,7 +52,7 @@ if __name__ == "__main__":
   parser.add_argument("--num_samples", type=int, default=128000)
   parser.add_argument("--batch_size", type=int, default=128)
   parser.add_argument("--filename", type=str, default=None)
-  parser.add_argument("--solver", type=str, default="lkh")
+  parser.add_argument("--solver", type=str, default="concorde")
   parser.add_argument("--lkh_trails", type=int, default=1000)
   parser.add_argument("--seed", type=int, default=1234)
   opts = parser.parse_args()
