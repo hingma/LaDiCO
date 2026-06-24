@@ -38,6 +38,7 @@ sys.path.insert(0, _DIR)
 sys.path.insert(0, os.path.join(_DIR, '..', 'difusco'))
 from co_datasets.tsp_graph_dataset import TSPGraphDataset
 from edge_vqvae import TSPEdgeVQVAE, bhh_energy_loss
+from dist_vqvae import TSPDistVQVAE
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -55,15 +56,25 @@ class VQVAELitModule(pl.LightningModule):
         super().__init__()
         self.args = args
 
-        self.model = TSPEdgeVQVAE(
-            n_enc_layers=args.n_enc_layers,
-            n_dec_layers=args.n_dec_layers,
-            hidden_dim=args.hidden_dim,
-            latent_dim=args.latent_dim,
-            num_codes=args.num_codes,
-            commitment_cost=args.vq_commitment_cost,
-            aggregation=args.aggregation,
-        )
+        if args.vqvae_type == "codebook":
+            self.model = TSPEdgeVQVAE(
+                n_enc_layers=args.n_enc_layers,
+                n_dec_layers=args.n_dec_layers,
+                hidden_dim=args.hidden_dim,
+                latent_dim=args.latent_dim,
+                num_codes=args.num_codes,
+                commitment_cost=args.vq_commitment_cost,
+                aggregation=args.aggregation,
+            )
+        else:
+            self.model = TSPDistVQVAE(
+                n_enc_layers=args.n_enc_layers,
+                n_dec_layers=args.n_dec_layers,
+                hidden_dim=args.hidden_dim,
+                latent_dim=args.latent_dim,
+                commitment_cost=args.vq_commitment_cost,
+                aggregation=args.aggregation,
+            )
 
         self.sparse_factor = args.sparse_factor
         self.bhh_alpha = args.bhh_alpha
@@ -163,8 +174,11 @@ class VQVAELitModule(pl.LightningModule):
         fn     = ((1.0 - preds) * targets).sum()
         recall = tp / (tp + fn + 1e-8)
 
-        # Codebook utilisation
-        util = out["indices"].unique().numel() / self.model.vq.num_codes
+        # Codebook utilisation (fraction of nodes selected as nearest neighbour for dist mode)
+        if hasattr(self.model.vq, "num_codes"):
+            util = out["indices"].unique().numel() / self.model.vq.num_codes
+        else:
+            util = out["indices"].unique().numel() / out["indices"].numel()
 
         self.log("val/total_loss",  out["total"],  on_epoch=True, sync_dist=True)
         self.log("val/bce_loss",    out["bce"],    on_epoch=True, sync_dist=True, prog_bar=True)
@@ -248,8 +262,12 @@ def arg_parser():
                    help="GNN hidden dimension H.")
     p.add_argument("--latent_dim",          type=int,   default=8,
                    help="Per-node latent dimension d (e.g. 4 or 8).")
+    p.add_argument("--vqvae_type",           type=str,   default="codebook",
+                   choices=["codebook", "dist"],
+                   help="'codebook': learned VQ lookup in embedding space (EdgeVQVAE); "
+                        "'dist': K-NN mean aggregation in coordinate space (DistVQVAE).")
     p.add_argument("--num_codes",           type=int,   default=512,
-                   help="VQ codebook size V.")
+                   help="VQ codebook size (only used when --vqvae_type codebook).")
     p.add_argument("--n_enc_layers",        type=int,   default=4,
                    help="GNN layers in the encoder.")
     p.add_argument("--n_dec_layers",        type=int,   default=4,
